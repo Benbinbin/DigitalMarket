@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Digital Market</title>
+    <!-- Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!-- headers -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+        <i class="far fa-lightbulb"></i>
+        数字充电站
+      </a>
+      <!-- 购物车按钮 (Button 內包含购物车 icon,展示已选商品数量 badge) -->
+      <div class="dropdown ml-auto">
+        <button class="btn btn-sm btn-cart" data-toggle="dropdown" data-flip="false">
+          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+          <span class="badge badge-danger badge-pill">2</span>
+          <span class="sr-only">unread messages</span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" style="min-width: 300px" data-offset="400">
+          <div class="px-4 py-3">
+            <h6>已选择的商品</h6>
+            <table class="table table-sm">
+              <tbody>
+                <tr>
+                  <td class="align-middle">
+                    <a href="#removeModal" class="btn" data-toggle="modal" data-title="唱片 1 张">
+                      <i class="far fa-trash-alt"></i>
+                    </a>
+                  </td>
+                  <td class="align-middle">唱片</td>
+                  <td class="align-middle">1 件</td>
+                  <td class="align-middle text-right">￥20</td>
+                </tr>
+                <tr>
+                  <td class="align-middle">
+                    <a href="#removeModal" class="btn" data-toggle="modal" data-title="电子书 1 本"">
+                      <i class=" far fa-trash-alt"></i>
+                    </a>
+                  </td>
+                  <td class="align-middle">电子书</td>
+                  <td class="align-middle">1 本</td>
+                  <td class="align-middle text-right">￥10</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="shoppingCart-checkout.html" class="btn btn-primary btn-block">
+              </i> 结账
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent pl-0">
+          <li class="breadcrumb-item"><a href="index.html">主页</a></li>
+          <li class="breadcrumb-item active" aria-current="page">商品详情</li>
+        </ol>
+      </nav>
+
+      <div class="row">
+        <div class="col-lg-3 mb-3">
+          <div class="sticky-top" style="top:10px">
+            <h1 class="h3">Only You</h1>
+            <div class="d-flex justify-content-end">
+              <span class="text-muted">原价：￥30</span>
+              <div class="h5 ml-auto mb-0">
+                特价：<strong class="text-danger">￥25</strong>
+              </div>
+            </div>
+            <hr />
+            <div>
+              来源：
+              <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-success active">
+                  <input type="radio" name="options" id="option1" checked><img src="images/NeteaseMusic.svg" alt="">
+                </label>
+                <label class="btn btn-outline-success">
+                  <input type="radio" name="options" id="option2"><img src="images/QQMusic.svg" alt="">
+                </label>
+                <label class="btn btn-outline-success disabled">
+                  <input type="radio" name="options" id="option3"><img src="images/spotify.svg" disabled alt="">
+                </label>
+              </div>
+            </div>
+            <div class="input-group mt-3">
+              <select name="" id="" class="form-control mr-1">
+                <option>1 张</option>
+                <option>2 张</option>
+                <option>3 张</option>
+              </select>
+              <a href="" class="btn btn-success">加入购物车</a>
+              <a href="shoppingCart-checkout.html" class="btn btn-block btn-primary mt-3">去结账</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <h2 class="text-center mb-5">专辑详情</h2>
+          <div class="media m-5">
+            <img src="https://img9.doubanio.com/view/subject/m/public/s3176500.jpg" class="img-fluid mr-3" width="200"
+              alt="...">
+            <div class="media-body">
+              <h3 class="mt-0">Only You</h2>
+                安全地带于1982年2月首次亮相，在2002年推出这张专辑庆祝成立20周年，收录他们多首最受欢迎歌曲，如「ワインレッドの心」和「碧い瞳のエリス」。
+            </div>
+          </div>
+          <h3 class="text-center">曲目列表</h3>
+          <ol>
+            <ol>
+              <li>あなたに</li>
+              <li>夢のつづき</li>
+              <li>Only You</li>
+              <li>Juliet</li>
+              <li>消えない夜</li>
+              <li>あのとき……</li>
+              <li>夢</li>
+              <li>Friend</li>
+              <li>…もしも…</li>
+              <li>行かないで</li>
+              <li>碧い瞳のエリス</li>
+              <li>ほゝえみ</li>
+              <li>まちかど</li>
+              <li>想い出につつまれて</li>
+              <li>Too Late Too Late</li>
+              <li>All I Do</li>
+              <li>To me</li>
+              <li>朝の陽ざしに君がいて</li>
+            </ol>
+          </ol>
+          <h3 class="text-center">乐团成员</h3>
+          <div class="media m-5">
+            <img src="images/user.svg" class="mr-3" alt="...">
+            <div class="media-body">
+              <h5 class="mt-0">玉置浩二</h5>
+              玉置浩二（たまき こうじ、Tamaki Koji）是乐队的主唱、吉他手、打击乐器演奏者
+            </div>
+          </div>
+          <div class="media m-5">
+            <img src="images/user.svg" class="mr-3" alt="...">
+            <div class="media-body">
+              <h5 class="mt-0">矢萩渉</h5>
+              矢萩渉（やはぎ わたる、Yahagi Wataru）是乐队的吉他手
+            </div>
+          </div>
+          <div class="media m-5">
+            <img src="images/user.svg" class="mr-3" alt="...">
+            <div class="media-body">
+              <h5 class="mt-0">武沢豊</h5>
+              武沢豊（たけざわ ゆたか、Takezawa Yutaka）是乐队的吉他手
+            </div>
+          </div>
+          <div class="media m-5">
+            <img src="images/user.svg" class="mr-3" alt="...">
+            <div class="media-body">
+              <h5 class="mt-0">六土开正</h5>
+              六土开正（ろくど はるよし、Rokudo Haruyoshi）是乐队的贝斯手、钢琴手
+            </div>
+          </div>
+          <div class="media m-5">
+            <img src="images/user.svg" class="mr-3" alt="...">
+            <div class="media-body">
+              <h5 class="mt-0">田中裕二</h5>
+              田中裕二（たなか ゆうじ、Tanaka Yuji）是乐队的爵士鼓手
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-light py-3">
+      <div class="container">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">© Copright 2020 Digital Market</li>
+          <li class="list-inline-item">
+            <a class="text-primary" href="#">About</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-primary" href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-primary" href="https://www.facebook.com" target="_blank">
+              <i class="fab fa-facebook " aria-hidden="true"></i></a>
+          </li>
+        </ul>
+        <p class="text-center">Made with Bootstrap4</p>
+      </div>
+    </footer>
+
+    <!-- modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title">删除商品</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>是否确认删除商品</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">否</button>
+            <button type="button" class="btn btn-outline-danger">是</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+
+    <script>
+      $(document).ready(function () {
+        // 编辑 Modal 事件
+        $('#editModal').on('show.bs.modal', function (event) {
+          let button = $(event.relatedTarget);   // 选择触发事件的按钮
+          let title = button.data('title');   // 读取按钮元素中的 data-* 属性值
+          let modal = $(this);    // 当前的 modal
+          modal.find('.modal-title').text(title);   // 将读取的数据「写入」Modal
+        });
+
+        // 删除 Modal 事件
+        $('#removeModal').on('show.bs.modal', function (event) {
+          let button = $(event.relatedTarget);
+          let title = button.data('title');
+          let modal = $(this);
+          modal.find('.modal-title').text('确认删除' + title);
+        })
+      });
+    </script>
+
+  </body>
+
+</html>

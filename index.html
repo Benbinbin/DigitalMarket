@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Digital Market</title>
+  <!-- Bootstrap 4 CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+  <!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- headers -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+      <i class="far fa-lightbulb"></i>
+      数字充电站
+    </a>
+    <!-- 购物车按钮 (Button 內包含购物车 icon,展示已选商品数量 badge) -->
+    <div class="dropdown ml-auto">
+      <button class="btn btn-sm btn-cart" data-toggle="dropdown" data-flip="false">
+        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+        <span class="badge badge-danger badge-pill">2</span>
+        <span class="sr-only">unread messages</span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right" style="min-width: 300px" data-offset="400">
+        <div class="px-4 py-3">
+          <h6>已选择的商品</h6>
+          <table class="table table-sm">
+            <tbody>
+              <tr>
+                <td class="align-middle">
+                  <a href="#removeModal" class="btn" data-toggle="modal" data-title="唱片 1 张">
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+                </td>
+                <td class="align-middle">唱片</td>
+                <td class="align-middle">1 件</td>
+                <td class="align-middle text-right">￥20</td>
+              </tr>
+              <tr>
+                <td class="align-middle">
+                  <a href="#removeModal" class="btn" data-toggle="modal" data-title="电子书 1 本"">
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+                </td>
+                <td class="align-middle">电子书</td>
+                <td class="align-middle">1 本</td>
+                <td class="align-middle text-right">￥10</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="shoppingCart-checkout.html" class="btn btn-primary btn-block">
+            </i> 结账
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- jumbotron-->
+  <div class="jumbotron jumbotron-fluid jumbotron-bg d-flex align-items-end">
+    <div class="container">
+      <div class="bg-darker p-5 text-white">
+        <h1 class="display-4">数字充电站！</h1>
+        <p class="lead">丰富的优质数字产品，让你买到吃手手，宅出文艺范</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- main -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <div class="list-group sticky-top" style="top: 10px" id="list-tab" role="tablist">
+          <a href="#albums" class="list-group-item list-group-item-action active" data-toggle="list" role="tab"
+            aria-controls="albums"><i class="fas fa-compact-disc"></i> 唱片</a>
+          <a href="#books" class="list-group-item list-group-item-action" data-toggle="list" role="tab"
+            aria-controls="books"><i class="fas fa-book"></i> 书籍</a>
+          <a href="#movies" class="list-group-item list-group-item-action" data-toggle="list" role="tab"
+            aria-controls="movies"><i class="fas fa-video"></i> 剧集</a>
+          <a href="#games" class="list-group-item list-group-item-action" data-toggle="list" role="tab"
+            aria-controls="games"><i class="fas fa-gamepad"></i> 游戏</a>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="albums" role="tabpanel" aria-labelledby="albums-list">
+            <div class="row">
+              <div class="col-lg-4 mb-3">
+                <div class="card h-100 box-shadow">
+                  <img src="https://img1.doubanio.com/view/subject/m/public/s29172578.jpg" class="card-img-top"
+                    alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">飞行器的执行周期</h5>
+                    <p class="card-text"><i class="fas fa-user mr-2"></i>郭顶</p>
+                    <p class="card-text"><i class="far fa-thumbs-up mr-2"></i>⭐⭐⭐⭐⭐</p>
+                    <a href="shoppingCart-product.html" class="btn btn-block btn-outline-secondary" role="button" data-toggle="tooltip"
+                      data-placement="top" title="郭顶历时两年的时间创作与录制，运用科幻主题与根源化音乐风格构建一个主题与风格对冲却充满想象力的故事。郭顶说：这张专辑听起来像一道巨大峡谷的裂缝从每个人自己的故事展开，最终形成一扇出口，送你到达你想去的地方。">简介</a>
+                    <a class="btn btn-block btn-primary text-white" role="button">加入购物车</a>
+                  </div>
+                  <div class="card-footer text-center" primary>
+                    <div class="btn-group btn-group-sm">
+                      <a href="https://open.spotify.com/album/0Xxoh9bYLeYX1iwKDt9Xky" target="_blank"
+                        class="btn btn-light"><img src="images/spotify.svg" alt=""></a>
+                      <a href="https://y.qq.com/n/m/detail/album/index.html?albummid=003Rjfrr0BXKpX" target="_blank"
+                        class="btn btn-light"><img src="images/QQMusic.svg" alt=""></a>
+                      <a href="http://music.163.com/album?id=35005583" target="_blank" class="btn btn-light"><img
+                          src="images/NeteaseMusic.svg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <div class="card h-100 box-shadow">
+                  <img src="https://img9.doubanio.com/view/subject/m/public/s29991187.jpg" class="card-img-top"
+                    alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">1</h5>
+                    <p class="card-text"><i class="fas fa-user mr-2"></i>Elaine</p>
+                    <p class="card-text"><i class="far fa-thumbs-up mr-2"></i>⭐⭐⭐⭐</p>
+                    <a href="shoppingCart-product.html" class="btn btn-block btn-outline-secondary" role="button" data-toggle="tooltip"
+                       data-placement="top" title="이번 앨범 <1>은 일레인이 17살부터 최근까지 작업 한 곡들로 채워져 있으며 타이틀 곡 “Falling”은 ‘당신에게 더 깊이 빠지고 있어요’. 멀지만 멀지 않은 것 같은 보고 싶은 사람을 그리는 곡으로 풍성한 스트링 사운드가 귀를 사로잡는다. 또 타이틀 곡 “Falling”과는 다른 분위기의 “Psycho”는 남들과 다름에서 오는 외로움을 담은 곡이지만 경쾌한 멜로디로 외로움을 색다르게 표현하였고 를 통해 선보였던 “죽어도 좋아”를 음원으로도 만날 수 있게 되었다.">简介</a>
+                    <a class="btn btn-block btn-primary text-white" role="button">加入购物车</a>
+                  </div>
+                  <div class="card-footer text-center">
+                    <div class="btn-group btn-group-sm">
+                      <a href="https://open.spotify.com/album/0ifMsKpLd2y53PiCljfZCw" target="_blank"
+                        class="btn btn-light"><img src="images/spotify.svg" alt=""></a>
+                      <a href="" target="_blank" class="btn btn-light disabled"><img src="images/QQMusic.svg"
+                          alt=""></a>
+                      <a href="http://music.163.com/album?id=73876801" target="_blank" class="btn btn-light"><img
+                          src="images/NeteaseMusic.svg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <div class="card h-100 box-shadow">
+                  <img src="https://img9.doubanio.com/view/subject/m/public/s3176500.jpg" class="card-img-top"
+                    alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Only You</h5>
+                    <p class="card-text"><i class="fas fa-user mr-2"></i>安全地带</p>
+                    <p class="card-text"><i class="far fa-thumbs-up mr-2"></i>⭐⭐⭐⭐⭐</p>
+                    <a href="shoppingCart-product.html" class="btn btn-block btn-outline-secondary" role="button" data-toggle="tooltip"
+                       data-placement="top" title="安全地带于1982年2月首次亮相，在2002年推出这张专辑庆祝成立20周年，收录他们多首最受欢迎歌曲，如「ワインレッドの心」和「碧い瞳のエリス」。">简介</a>
+                    <a class="btn btn-block btn-primary text-white" role="button">加入购物车</a>
+                  </div>
+                  <div class="card-footer text-center">
+                    <div class="btn-group btn-group-sm">
+                      <a href="" target="_blank" class="btn btn-light disabled"><img src="images/spotify.svg"
+                          alt=""></a>
+                      <a href="https://y.qq.com/n/m/detail/album/index.html?albummid=002cbzqa3d5fnF" target="_blank"
+                        class="btn btn-light"><img src="images/QQMusic.svg" alt=""></a>
+                      <a href="http://music.163.com/album?id=65756" target="_blank" class="btn btn-light"><img
+                          src="images/NeteaseMusic.svg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <div class="card h-100 box-shadow">
+                  <img src="https://img9.doubanio.com/view/subject/m/public/s33572246.jpg" class="card-img-top"
+                    alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">낭만닥터 김사부2 OST Part.6</h5>
+                    <p class="card-text"><i class="fas fa-user mr-2"></i>MAMAMOO (마마무)</p>
+                    <p class="card-text"><i class="far fa-thumbs-up mr-2"></i>⭐⭐⭐⭐⭐</p>
+                    <a href="shoppingCart-product.html" class="btn btn-block btn-outline-secondary" role="button" data-toggle="tooltip"
+                       data-placement="top" title="SBS 剧集《浪漫医生金 2》OST">简介</a>
+                    <a class="btn btn-block btn-primary text-white" role="button">加入购物车</a>
+                  </div>
+                  <div class="card-footer text-center">
+                    <div class="btn-group btn-group-sm">
+                      <a href="https://open.spotify.com/album/1Zvz0jVLW9WtO5X4Pqskgx" target="_blank"
+                        class="btn btn-light"><img src="images/spotify.svg" alt=""></a>
+                      <a href="https://y.qq.com/n/m/detail/album/index.html?albummid=001xkC274RKu3J" target="_blank"
+                        class="btn btn-light"><img src="images/QQMusic.svg" alt=""></a>
+                      <a href="" target="_blank" class="btn btn-light disabled"><img src="images/NeteaseMusic.svg"
+                          alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <div class="card  h-100 box-shadow">
+                  <img src="https://img9.doubanio.com/view/subject/m/public/s33553862.jpg" class="card-img-top"
+                    alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">UNSTABLE MINDSET</h5>
+                    <p class="card-text"><i class="fas fa-user mr-2"></i>윤하 / Younha</p>
+                    <p class="card-text"><i class="far fa-thumbs-up mr-2"></i>⭐⭐⭐⭐⭐</p>
+                    <a href="shoppingCart-product.html" class="btn btn-block btn-outline-secondary" role="button" data-toggle="tooltip"
+                       data-placement="top" title="먹구름 뒤에 비가 내리지만 뒤바뀐 순서 남들과는 조금 다른 순서로 살고 있는 화자의 성장에 대한 이야기 중심을 잡기위해 최대한 집중할 때 보여지는 외연은 가장 불안정하다.">简介</a>
+                    <a class="btn btn-block btn-primary text-white" role="button">加入购物车</a>
+                  </div>
+                  <div class="card-footer text-center">
+                    <div class="btn-group btn-group-sm">
+                      <a href="https://open.spotify.com/album/7tY3mqjeJaMr6RFJYnjI2s" target="_blank"
+                        class="btn btn-light"><img src="images/spotify.svg" alt=""></a>
+                      <a href="https://y.qq.com/n/m/detail/album/index.html?albummid=001KHoXi01oLbm" target="_blank"
+                        class="btn btn-light"><img src="images/QQMusic.svg" alt=""></a>
+                      <a href="http://music.163.com/album?id=84785754" target="_blank" class="btn btn-light"><img
+                          src="images/NeteaseMusic.svg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="books" role="tabpanel" aria-labelledby="books-list">
+            <div class="row">
+              <div class="col-lg-4 mb-3">
+                <div class="card h-100 box-shadow">
+                  <img src="https://img9.doubanio.com/view/subject/l/public/s29423950.jpg" class="card-img-top"
+                    alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">音乐即自由</h5>
+                    <p class="card-text"><i class="fas fa-user mr-2"></i>坂本龙一</p>
+                    <p class="card-text"><i class="far fa-thumbs-up mr-2"></i>⭐⭐⭐⭐⭐</p>
+                    <a href="shoppingCart-product.html" class="btn btn-block btn-outline-secondary" role="button" data-toggle="tooltip"
+                       data-placement="top" title="本书是日本著名音乐大师坂本龙一唯一口述自传。幼时的坂本龙一，因为饲养小白兔而作的一曲《小兔之歌》，使他第一次强烈地体会到音乐带来的喜悦。青年时，他是一名彻头彻尾的“愤青”，罢课抗议、游行示威，但也迷恋于德彪西、贝多芬、披头士，并潜心阅读黑格尔、胡塞尔、德里达等。期间，他 曾一度拒绝学习钢琴，正因为这次“拒绝”带来的空虚，使他察觉到“自己原来是如此喜爱音乐啊”，音乐使他自由。此后，他真正开启了自己的音乐人生，凭借《末代皇帝》的配乐，他登顶国际舞台赢得盛誉…在口述中，坂本龙一不断俯瞰自己迄今为止的生命，以期看清现在的自我。书中还穿插着他不同时期的照片50余幅，展现了这位音乐大师充满魅力的人生历程。">简介</a>
+                    <a class="btn btn-block btn-primary text-white" role="button">加入购物车</a>
+                  </div>
+                  <div class="card-footer text-center" primary>
+                    <div class="btn-group btn-group-sm">
+                      <a href="https://book.douban.com/subject/27018089/" target="_blank"
+                        class="btn btn-light"><img src="images/douban.svg" alt=""></a>
+                      <a href="http://search.dangdang.com/?key=%D2%F4%C0%D6%BC%B4%D7%D4%D3%C9" target="_blank"
+                        class="btn btn-light"><img src="images/dangdang.svg" alt=""></a>
+                      <a href="" target="_blank" class="btn btn-light disabled"><img
+                          src="images/amazon.svg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="movies" role="tabpanel" aria-labelledby="movies-list">
+            <div class="row">
+              <div class="col-lg-4 mb-3">
+                <div class="card h-100 box-shadow">
+                  <img src="https://img9.doubanio.com/view/photo/l/public/p2571694925.webp" class="card-img-top"
+                    alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Silicon Valley</h5>
+                    <p class="card-text"><i class="fas fa-film mr-2"></i>美剧</p>
+                    <p class="card-text"><i class="far fa-thumbs-up mr-2"></i>⭐⭐⭐⭐⭐</p>
+                    <a href="shoppingCart-product.html" class="btn btn-block btn-outline-secondary" role="button" data-toggle="tooltip"
+                       data-placement="top" title="在现代硅谷的高科技淘金热中，最有能力取得成功的人最无能为力。 这部喜剧的部分灵感来自于1980年代后期 Mike Judge 作为硅谷工程师的经历。">简介</a>
+                    <a class="btn btn-block btn-primary text-white" role="button">加入购物车</a>
+                  </div>
+                  <div class="card-footer text-center" primary>
+                    <div class="btn-group btn-group-sm">
+                      <a href="https://www.imdb.com/title/tt2575988/" target="_blank"
+                        class="btn btn-light"><i class="fab fa-imdb"></i></a>
+                      <a href="https://www.hbo.com/silicon-valley" target="_blank"
+                        class="btn btn-light"><img src="images/hbo.svg" alt=""></a>
+                      <a href="https://v.qq.com/detail/i/ijilh0frmu96sbf.html" target="_blank" class="btn btn-light"><img
+                          src="images/tencentVideo.svg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="games" role="tabpanel" aria-labelledby="games-list">
+            <div class="row">
+              <div class="col-lg-4 mb-3">
+                <div class="card h-100 box-shadow">
+                  <img src="https://images-eu.ssl-images-amazon.com/images/I/71zAmevcWQL.png" class="card-img-top"
+                    alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Silicon Valley</h5>
+                    <p class="card-text"><i class="fas fa-users mr-2"></i>USTWO</p>
+                    <p class="card-text"><i class="far fa-thumbs-up mr-2"></i>⭐⭐⭐⭐⭐</p>
+                    <a href="shoppingCart-product.html" class="btn btn-block btn-outline-secondary" role="button" data-toggle="tooltip"
+                       data-placement="top" title="引导母亲和她的孩子踏上神奇的建筑之旅，在他们了解神圣几何学的秘密时，发现幻觉的途径和令人困惑的难题。帮助Ro教孩子关于山谷的奥秘，探索令人惊叹的环境并操纵建筑以引导他们前进。">简介</a>
+                    <a class="btn btn-block btn-primary text-white" role="button">加入购物车</a>
+                  </div>
+                  <div class="card-footer text-center" primary>
+                    <div class="btn-group btn-group-sm">
+                      <a href="https://www.amazon.co.uk/dp/B076DJSTDQ" target="_blank"
+                        class="btn btn-light"><img src="images/amazon.svg" alt=""></a>
+                      <a href="https://play.google.com/store/apps/details?id=com.ustwo.monumentvalley2" target="_blank"
+                        class="btn btn-light"><i class="fab fa-google-play"></i></a>
+                      <a href="https://apps.apple.com/us/app/monument-valley-2/id1187265767" target="_blank" class="btn btn-light"><i class="fab fa-apple"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="bg-light py-3">
+    <div class="container">
+      <ul class="list-inline text-center">
+        <li class="list-inline-item">© Copright 2020 Digital Market</li>
+        <li class="list-inline-item">
+          <a class="text-primary" href="#">About</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="text-primary" href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a class="text-primary" href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook " aria-hidden="true"></i></a>
+        </li>
+      </ul>
+      <p class="text-center">Made with Bootstrap4</p>
+    </div>
+  </footer>
+
+  <!-- modal -->
+  <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">删除商品</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>是否确认删除商品</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">否</button>
+          <button type="button" class="btn btn-outline-danger">是</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+
+  <script>
+    $(document).ready(function () {
+
+      // 工具提示框 Tooltips
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // 编辑 Modal 事件
+      $('#editModal').on('show.bs.modal', function (event) {
+        let button = $(event.relatedTarget);   // 选择触发事件的按钮
+        let title = button.data('title');   // 读取按钮元素中的 data-* 属性值
+        let modal = $(this);    // 当前的 modal
+        modal.find('.modal-title').text(title);   // 将读取的数据「写入」Modal
+      });
+
+      // 删除 Modal 事件
+      $('#removeModal').on('show.bs.modal', function (event) {
+        let button = $(event.relatedTarget);
+        let title = button.data('title');
+        let modal = $(this);
+        modal.find('.modal-title').text('确认删除' + title);
+      })
+    });
+  </script>
+
+</body>
+
+</html>

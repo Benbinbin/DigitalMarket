@@ -1,0 +1,38 @@
+.btn-cart {
+    position: relative;
+}
+
+.btn-cart .badge {
+    position: absolute;
+    top: -2px;
+    right: -1px;
+}
+
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+.jumbotron-bg {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 400px;
+}
+
+.bg-darker {
+    background-color: rgba(0, 0, 0, .65);
+}
+
+.box-shadow:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    transition: box-shadow .3s;
+}
+
+.alert-rounded {
+    border-radius: 50px;
+}
+
+.main {
+    min-height: calc(100vh - (112px + 56px));
+}

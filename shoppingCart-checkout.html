@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Digital Market</title>
+    <!-- Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <!-- headers -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+        <i class="far fa-lightbulb"></i>
+        数字充电站
+      </a>
+      <!-- 购物车按钮 (Button 內包含购物车 icon,展示已选商品数量 badge) -->
+      <div class="dropdown ml-auto">
+        <button class="btn btn-sm btn-cart" data-toggle="dropdown" data-flip="false">
+          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+          <span class="badge badge-danger badge-pill">2</span>
+          <span class="sr-only">unread messages</span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" style="min-width: 380px" data-offset="400">
+          <div class="px-4 py-3">
+            <h6>已选择的商品</h6>
+            <table class="table table-sm text-center">
+              <thead>
+                <tr>
+                  <th class="align-middle" width="10"></th>
+                  <th class="align-middle" width="80">商品类型</th>
+                  <th class="align-middle">商品名称</th>
+                  <th class="align-middle" width="50">数量</th>
+                  <th class="align-middle text-right">价格</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="align-middle">
+                    <a href="#removeModal" class="btn" data-toggle="modal" data-title="唱片 1 张">
+                      <i class="far fa-trash-alt"></i>
+                    </a>
+                  </td>
+                  <td class="align-middle">唱片</td>
+                  <td class="align-middle">Only You</td>
+                  <td class="align-middle">1 件</td>
+                  <td class="align-middle text-right">￥25</td>
+                </tr>
+                <tr>
+                  <td class="align-middle">
+                    <a href="#removeModal" class="btn" data-toggle="modal" data-title="电子书 1 本"">
+                      <i class=" far fa-trash-alt"></i>
+                    </a>
+                  </td>
+                  <td class="align-middle">电子书</td>
+                  <td class="align-middle">音乐即自由</td>
+                  <td class="align-middle">1 本</td>
+                  <td class="align-middle text-right">￥30</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="shoppingCart-checkout.html" class="btn btn-primary btn-block">
+              </i> 结账
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <div class="main container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent pl-0">
+          <li class="breadcrumb-item"><a href="index.html">主页</a></li>
+          <li class="breadcrumb-item active" aria-current="page">结账</li>
+        </ol>
+      </nav>
+
+      <h1 class="text-center mb-3 text-secondary">结账</h1>
+      <div class="row text-center">
+        <div class="col-12 col-sm">
+          <div class="alert alert-success alert-rounded" role="alert">
+            输入订单信息
+          </div>
+        </div>
+        <div class="col-12 col-sm">
+          <div class="alert alert-secondary alert-rounded" role="alert">
+            付款
+          </div>
+        </div>
+        <div class="col-12 col-sm">
+          <div class="alert alert-secondary alert-rounded" role="alert">
+            完成
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+          <div class="card mb-3">
+            <div class="card-header">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#cart" aria-expanded="true"
+                aria-controls="collapseCart">
+                显示购物车详情
+                <i class="fas fa-sort-down"></i>
+              </button>
+            </div>
+          </div>
+
+          <div id="cart" class="collapse mb-3" aria-labelledby="cart">
+            <table class="table table-sm text-center">
+              <thead>
+                <tr>
+                  <th class="align-middle" width="10"></th>
+                  <th class="align-middle">商品类型</th>
+                  <th class="align-middle text-right"></th>
+                  <th class="align-middle text-left">商品名称</th>
+                  <th class="align-middle">数量</th>
+                  <th class="align-middle text-right">价格</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="align-middle">
+                    <a href="#removeModal" class="btn" data-toggle="modal" data-title="唱片 1 张">
+                      <i class="far fa-trash-alt"></i>
+                    </a>
+                  </td>
+                  <td class="align-middle">唱片</td>
+                  <td class="align-middle text-right"><img
+                      src="https://img9.doubanio.com/view/subject/m/public/s3176500.jpg" width="50" alt=""></td>
+                  <td class="align-middle text-left">Only You</td>
+                  <td class="align-middle">1 件</td>
+                  <td class="align-middle text-right">￥25</td>
+                </tr>
+                <tr>
+                  <td class="align-middle">
+                    <a href="#removeModal" class="btn" data-toggle="modal" data-title="电子书 1 本"">
+                          <i class=" far fa-trash-alt"></i>
+                    </a>
+                  </td>
+                  <td class="align-middle">电子书</td>
+                  <td class="align-middle text-right"><img
+                      src="https://img9.doubanio.com/view/subject/l/public/s29423950.jpg" width="50" alt=""></td>
+                  <td class="align-middle text-left">音乐即自由</td>
+                  <td class="align-middle">1 本</td>
+                  <td class="align-middle text-right">￥30</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-right" colspan="5">运费</td>
+                  <td class="text-right">￥0</td>
+                </tr>
+                <tr>
+                  <td class="text-right font-weight-bolder" colspan="5">合计</td>
+                  <td class="text-right font-weight-bolder">￥55</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <h2 class="text-center bg-light py-3 h3">订单信息</h2>
+          <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="email">邮箱*</label>
+                <input type="email" class="form-control" id="email" placeholder="填入邮箱地址 example@domain.com" required>
+                <div class="invalid-feedback">
+                  请填入正确的邮箱地址
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">收件人*</label>
+                <input type="text" class="form-control" id="name" placeholder="填入收件人名称" required>
+                <div class="invalid-feedback">
+                  请填写收件人
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="comment">备注</label>
+              <textarea class="form-control" id="comment" placeholder="填入备注"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="tel">联系电话</label>
+              <input type="tel" class="form-control" id="tel" placeholder="填入联系电话">
+            </div>
+
+            <div class="form-group d-flex justify-content-between">
+              <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" type="checkbox" id="checkbox" required>
+                <label class="custom-control-label" for="checkbox">
+                  已阅读并同意用户协议
+                </label>
+                <div class="invalid-feedback">
+                  需要同意用户协议才可提交表单
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">提交订单</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <footer class="bg-light py-3">
+      <div class="container">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">© Copright 2020 Digital Market</li>
+          <li class="list-inline-item">
+            <a class="text-primary" href="#">About</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-primary" href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-primary" href="https://www.facebook.com" target="_blank">
+              <i class="fab fa-facebook " aria-hidden="true"></i></a>
+          </li>
+        </ul>
+        <p class="text-center">Made with Bootstrap4</p>
+      </div>
+    </footer>
+
+    <!-- modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title">删除商品</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>是否确认删除商品</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">否</button>
+            <button type="button" class="btn btn-outline-danger">是</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+
+    <script>
+      $(document).ready(function () {
+        // 编辑 Modal 事件
+        $('#editModal').on('show.bs.modal', function (event) {
+          let button = $(event.relatedTarget);   // 选择触发事件的按钮
+          let title = button.data('title');   // 读取按钮元素中的 data-* 属性值
+          let modal = $(this);    // 当前的 modal
+          modal.find('.modal-title').text(title);   // 将读取的数据「写入」Modal
+        });
+
+        // 删除 Modal 事件
+        $('#removeModal').on('show.bs.modal', function (event) {
+          let button = $(event.relatedTarget);
+          let title = button.data('title');
+          let modal = $(this);
+          modal.find('.modal-title').text('确认删除' + title);
+        })
+      });
+
+      // 表单验证
+      (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+
+  </body>
+
+</html>
